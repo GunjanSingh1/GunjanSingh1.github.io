@@ -270,3 +270,10 @@ footer {
     color:#444;
   }
 }
+h6 {
+  font-size:12px;
+}
+
+ul2 {
+  list-style-image: url('sqpurple.gif');
+}
