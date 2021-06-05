@@ -388,7 +388,7 @@ line-height: 1.2;
 		display: block;
 		font-size: 0.8rem;
 		font-weight: 600;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.1rem;
 		line-height: 1.5;
 		margin: 0 0 1rem 0;
 		text-transform: uppercase;
@@ -1024,7 +1024,7 @@ line-height: 1.2;
 		font-size: 0.8rem;
 		font-weight: 300;
 		height: 2.75rem;
-		letter-spacing: 0.2rem;
+		letter-spacing: 0.1rem;
 		line-height: 2.75rem;
 		outline: 0;
 		padding: 0 1.25rem 0 1.35rem;
@@ -1678,3 +1678,5 @@ line-height: 1.2;
 		body.is-preload #footer {
 			opacity: 0;
 		} 
+		
+		
