@@ -13,9 +13,9 @@
     --ink:#3d2350;
     --text:#4a3a56;
     --muted:#8c7a5c;
-    --paper:#fff9e6;
+    --paper:#ffffff;
     --surface:#ffffff;
-    --line:#f0e2a0;
+    --line:#ece7d6;
     --primary:#ee6c4d;
     --primary-ink:#c9502f;
     --accent:#f2b705;
@@ -32,8 +32,8 @@
   body{
     margin:0;
     background:
-      radial-gradient(720px 480px at 88% -8%, rgba(238,108,77,.13), transparent 65%),
-      radial-gradient(620px 420px at -6% 18%, rgba(242,183,5,.16), transparent 60%),
+      radial-gradient(720px 480px at 88% -8%, rgba(238,108,77,.07), transparent 65%),
+      radial-gradient(620px 420px at -6% 18%, rgba(242,183,5,.08), transparent 60%),
       var(--paper);
     color:var(--text);
     font-family:'Source Sans 3', -apple-system, sans-serif;
@@ -73,7 +73,7 @@
   /* ---------- Nav ---------- */
   header.site-nav{
     position:sticky; top:0; z-index:50;
-    background:rgba(255,249,230,.92);
+    background:rgba(255,255,255,.92);
     backdrop-filter:blur(6px);
     border-bottom:1px solid var(--line);
   }
@@ -134,10 +134,12 @@
   .hero .role a{color:var(--primary-ink); text-decoration:none; border-bottom:1px dotted var(--primary);}
   .hero .role a:hover{color:var(--accent); border-color:var(--accent);}
   .hero p.tagline{
-    max-width:52ch;
+    max-width:none;
     margin-top:22px;
     font-size:18px;
     color:var(--text);
+    text-align:justify;
+    hyphens:auto;
     opacity:0; transform:translateY(10px);
     animation:rise .7s ease forwards .3s;
   }
@@ -187,7 +189,7 @@
   section{padding:56px 0; border-top:1px solid var(--line);}
   section .wrap > .eyebrow{margin-bottom:6px;}
   section h2.major{font-size:28px; margin-bottom:26px;}
-  .lede{max-width:70ch; color:var(--text);}
+  .lede{max-width:100%; color:var(--text); text-align:justify; hyphens:auto;}
   .lede + .lede{margin-top:14px;}
 
   /* Research tags */
@@ -213,7 +215,7 @@
   .tl-role{font-family:'Fraunces', serif; font-weight:600; color:var(--ink); font-size:18px; margin-top:3px;}
   .tl-org{font-size:14.5px; color:var(--text); margin-top:2px;}
   .tl-org a{text-decoration:none; border-bottom:1px dotted var(--primary);}
-  .tl-note{font-size:14px; color:var(--muted); margin-top:4px;}
+  .tl-note{font-size:14px; color:var(--muted); margin-top:4px; text-align:justify; hyphens:auto;}
   .pill-current{
     font-family:'IBM Plex Mono', monospace; font-size:10.5px;
     background:var(--accent); color:#2a1c02; padding:1px 7px; border-radius:10px;
@@ -242,6 +244,8 @@
     border-top:1px solid var(--line);
     position:relative;
     font-size:15px;
+    text-align:justify;
+    hyphens:auto;
   }
   ol.pub-list li:first-child{border-top:none;}
   ol.pub-list li::before{
@@ -262,6 +266,7 @@
   .rec-list li{
     display:grid; grid-template-columns:22px 1fr; gap:12px;
     padding:12px 0; border-top:1px solid var(--line); font-size:15px;
+    text-align:justify; hyphens:auto;
   }
   .rec-list li:first-child{border-top:none;}
   .rec-list li::before{content:"⊨"; color:var(--accent); font-family:'IBM Plex Mono', monospace;}
@@ -336,7 +341,7 @@
         <p class="role">
           Postdoctoral Researcher, Information Service Engineering (ISE)<br>
           <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering" target="_blank" rel="noreferrer">FIZ Karlsruhe – Leibniz Institute for Information Infrastructure</a><br>
-          with <a href="https://www.fiz-karlsruhe.de/en/bereiche/lebenslauf-prof-dr-harald-sack" target="_blank" rel="noreferrer">Prof.&nbsp;Dr.&nbsp;Harald&nbsp;Sack</a>
+          with <a href="https://www.fiz-karlsruhe.de/en/bereiche/lebenslauf-prof-dr-harald-sack" target="_blank" rel="noreferrer">Prof.&nbsp;Dr.&nbsp;Harald&nbsp;Sack</a> 
         </p>
         <p class="tagline">I build and benchmark reasoners for OWL&nbsp;2 ontologies — working across ontology reasoning, benchmark design, and neuro‑symbolic reasoning, where symbolic inference meets learned models.</p>
         <div class="hero-links">
@@ -459,7 +464,7 @@
         </li>
         <li>
           <div class="tl-period">Doctoral studies</div>
-          <div class="tl-role">PhD</div>
+          <div class="tl-role">PhD Researcher</div>
           <div class="tl-org">IIIT Delhi — advised by Dr. Raghava Mutharaju and Dr. Sumit Bhatia</div>
           <div class="tl-note">Benchmarks for description logic reasoners: static, streaming, and neuro-symbolic.</div>
         </li>
