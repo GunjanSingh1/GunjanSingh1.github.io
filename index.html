@@ -1,275 +1,603 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>Gunjan Singh</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons/css/academicons.min.css">
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload" >
-		<!-- Wrapper -->
-			 <div id="wrapper">
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-						
-						</div>
-						<div class="content" >
-							<div class="inner">
-								<h1>GUNJAN SINGH</h1>
-								<p>Ph. D STUDENT @ IIIT DELHI, INDIA ● IBM RESEARCH FELLOW</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<li><a href="#about">About</a></li>
-								<li><a href="#publications">Publications</a></li>
-								<li><a href="#projects">Projects</a></li>
-								<li><a href="#workexperience">Work Experience</a></li>
-								<li><a href="#activities">Activities and Awards</a></li>
-								<li><a href="#news">News</a></li>
-								
-<li><a href="https://raw.githubusercontent.com/GunjanSingh1/GunjanSingh1.github.io/main/files/cv.pdf">CV</a></li>
-							
-								<!-- <li><a href="#elements">Elements</a></li> -->
-							</ul>
-						</nav>
-					</header>
+<head>
+<meta charset="utf-8" />
+<title>Gunjan Singh — Ontology Reasoning &amp; Benchmarking</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="Gunjan Singh — Postdoctoral Researcher, Information Service Engineering (FIZ Karlsruhe), working on ontology reasoning, benchmarking, and neuro-symbolic AI." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Sans+3:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#4a1740;
+    --text:#55374e;
+    --muted:#8d6c86;
+    --paper:#fdf1f5;
+    --surface:#ffffff;
+    --line:#f3d7e3;
+    --primary:#df3f7c;
+    --primary-ink:#ad1f5f;
+    --accent:#f5a623;
+    --accent-soft:#fde6bd;
+    --radius:3px;
+    --wrap:1040px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+  body{
+    margin:0;
+    background:
+      radial-gradient(720px 480px at 88% -8%, rgba(223,63,124,.12), transparent 65%),
+      radial-gradient(620px 420px at -6% 18%, rgba(245,166,35,.10), transparent 60%),
+      var(--paper);
+    color:var(--text);
+    font-family:'Source Sans 3', -apple-system, sans-serif;
+    font-size:16.5px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--primary-ink);}
+  a:hover{color:var(--accent);}
+  a:focus-visible, button:focus-visible, summary:focus-visible{
+    outline:2.5px solid var(--accent);
+    outline-offset:3px;
+  }
+  h1,h2,h3{
+    font-family:'Fraunces', Georgia, serif;
+    color:var(--ink);
+    font-weight:600;
+    margin:0;
+  }
+  .wrap{max-width:var(--wrap); margin:0 auto; padding:0 28px;}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--primary);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:14px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:20px; height:1px;
+    background:var(--accent);
+    display:inline-block;
+  }
 
-				<!-- Main -->
-					<div id="main">
+  /* ---------- Nav ---------- */
+  header.site-nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(253,241,245,.92);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:var(--wrap); margin:0 auto; padding:14px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .nav-mark{
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:500; font-size:14px; color:var(--ink);
+    text-decoration:none; letter-spacing:.02em;
+    white-space:nowrap;
+  }
+  .nav-mark b{color:var(--primary);}
+  nav.nav-links{display:flex; gap:22px; flex-wrap:wrap;}
+  nav.nav-links a{
+    font-size:14px; text-decoration:none; color:var(--text);
+    font-weight:500;
+    border-bottom:1px solid transparent;
+    padding-bottom:2px;
+  }
+  nav.nav-links a:hover{color:var(--primary-ink); border-color:var(--accent);}
+  .nav-cv{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px; text-decoration:none;
+    color:var(--ink); border:1px solid var(--ink);
+    padding:7px 12px; border-radius:var(--radius);
+    white-space:nowrap;
+  }
+  .nav-cv:hover{background:var(--ink); color:var(--paper);}
+  #nav-toggle{display:none;}
+  .nav-burger{display:none;}
 
-						<!-- About -->
-							<article id="about">
-								<h2 class="major">About</h2>
-								
-							<p>I am a Ph. D student at the <a  href="https://www.iiitd.ac.in/" target="_blank" rel="noreferrer">Indraprastha Institute of Information Technology (IIIT), Delhi</a> and also an <a  href="https://www.research.ibm.com/university/awards/fellowships-awardees.html" target="_blank" rel="noreferrer">IBM Research Fellow</a>. 
-								My academic advisors are <a  href="http://faculty.iiitd.ac.in/~raghavam" target="_blank" rel="noreferrer">Dr. Raghava Mutharaju</a> (IIIT, Delhi)
-								and <a  href="http://sumitbhatia.net/" target="_blank" rel="noreferrer">Dr. Sumit Bhatia</a> (Adobe, India). </p>
-								<p>My doctoral research focused on developing benchmarks for description logic reasoners, encompassing static, streaming, and neuro-symbolic reasoners. This work has given me extensive expertise in several knowledge graphs and semantic web-related technologies, such as Ontology (OWL 2) Modeling, Conventional Static Reasoning (Tableau and Rule-based reasoners), SPARQL Query Engines, 
-								Temporal and Stream Reasoning, and Neuro-Symbolic Reasoning (including KG Completion, Deep-Deductive, and Inductive Reasoning methods). I have also worked on 
-								projects exploring non-conventional learning-based methods for efficient reasoning over expressive ontology languages such as OWL 2. My research interests 
-								include Machine Learning and Reinforcement Learning. 
-								<p>Prior to joining my Ph. D, I worked as an Assistant Professor at <a href="https://galgotiacollege.edu/" target="_blank" rel="noreferrer">Galgotias College of Engineering and 
-								Technology (A. K. T. U)</a> for 2.5 years.  I completed my Masters in Computer Science and Engineering with two gold-medals from 
-								<a  href="https://www.amu.ac.in/" target="_blank" rel="noreferrer">Aligarh Muslim University (A. M. U)</a>, India, 2016 and Bachelors in Computer Engineering 
-								from <a  href="https://www.amu.ac.in/" target="_blank" rel="noreferrer">Aligarh Muslim University (A. M. U)</a>, India, 2014.</p> 
-							</article>
-							
-							
-						<!-- Publications -->
-							<article id="publications">
-								<h2 class="major">Publications</h2>
-								
-							    <a   href="https://scholar.google.com/citations?user=svepziAAAAAJ&hl=en" target="_blank" rel="noreferrer"><i  class="ai ai-google-scholar "></i> Google Scholar</a>
-                                &nbsp; &nbsp;
-                                <a  href="https://dblp.uni-trier.de/pid/217/5394.html" target="_blank" rel="noreferrer"><i  class="ai ai-dblp "></i> DBLP</a>
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:76px 0 60px;
+    position:relative;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 1fr; gap:28px; align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(40px, 6vw, 62px);
+    line-height:1.03;
+    letter-spacing:-.01em;
+    opacity:0; transform:translateY(10px);
+    animation:rise .7s ease forwards .05s;
+  }
+  .hero .role{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:14.5px;
+    color:var(--muted);
+    margin-top:16px;
+    line-height:1.7;
+    opacity:0; transform:translateY(10px);
+    animation:rise .7s ease forwards .18s;
+  }
+  .hero .role a{color:var(--primary-ink); text-decoration:none; border-bottom:1px dotted var(--primary);}
+  .hero .role a:hover{color:var(--accent); border-color:var(--accent);}
+  .hero p.tagline{
+    max-width:52ch;
+    margin-top:22px;
+    font-size:18px;
+    color:var(--text);
+    opacity:0; transform:translateY(10px);
+    animation:rise .7s ease forwards .3s;
+  }
+  .hero-links{
+    margin-top:28px; display:flex; gap:14px; flex-wrap:wrap;
+    opacity:0; transform:translateY(10px);
+    animation:rise .7s ease forwards .42s;
+  }
+  .btn{
+    font-family:'IBM Plex Mono', monospace; font-size:13px;
+    text-decoration:none; padding:10px 16px; border-radius:var(--radius);
+    display:inline-flex; align-items:center; gap:8px;
+  }
+  .btn-primary{background:var(--ink); color:var(--paper);}
+  .btn-primary:hover{background:var(--primary-ink); color:#fff;}
+  .btn-ghost{border:1px solid var(--line); color:var(--text);}
+  .btn-ghost:hover{border-color:var(--primary); color:var(--primary-ink);}
+  @keyframes rise{to{opacity:1; transform:translateY(0);}}
 
-								<br><br>
-								<p style="color: #699096;border-top:1px solid  #ffffff;border-bottom:1px solid  #ffffff; text-align:justify;"><u>Disclaimer:</u></b><i> This material is presented to ensure timely dissemination of scholarly and technical work. Copyright and all rights therein are retained by authors or by other copyright holders. All person copying this information are expected to adhere to the terms and constraints invoked by each author's copyright. In most cases, these works may not be reposted without the explicit permission of the copyright holder.</i></p>
-								<ul >
-									<li><h3 >Conference/Journal Papers</h3></li>
-											
-												<ul >
-												<!--  <li> Gunjan Singh, Riccardo Tommasini, Pieter Bonte, Sumit Bhatia, Raghava Mutharaju, GenACT: An Ontology-based Temporal Web Data Generator, 43rd International Conference on Conceptual Modeling (ER), 2024 (Under review) </li>-->
-												<li> Gunjan Singh, Riccardo Tommasini, Sumit Bhatia, Raghava Mutharaju, Genact: An ontology-based temporal web data generator, Neurosymbolic Artificial Intelligence (NAI) Journal (To appear).</li>
-												<li> Gunjan Singh, Udit Arora, Shashikant Kumar, Riccardo Tommasini, Pieter Bonte, Sumit Bhatia, Raghava Mutharaju, Benchmarking Neuro-Symbolic Description Logic Reasoners: Existing Challenges and A Way Forward, 43rd International Conference on Conceptual Modeling, ER 2024, Pittsburgh, Pennsylvania, October 28-31, 2024, Proceedings. Lecture Notes in Computer Science, Springer, 2024 (To appear).</li>
-												<li> Gunjan Singh: Benchmarking Symbolic and Neuro-Symbolic Description Logic Reasoners. Doctoral Consortium, 22nd International Semantic Web Conference (ISWC), 2023 <a href="https://ceur-ws.org/Vol-3678/paper11.pdf" target="_blank" rel="noreferrer"> (link)</a></li>
-												<li> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju,  Neuro-Symbolic RDF and Description Logic Reasoners: State-Of-The-Art and Challenges,  Neuro-Symbolic Artificial Intelligence: The State of the Art, IOS Press, 2022 (Book Chapter)<a href="https://arxiv.org/pdf/2308.04814" target="_blank" rel="noreferrer"> (link)</a> </li>
-												<li> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju, OWL2Bench: A Benchmark for OWL 2 Reasoners, Accepted at Resources Track, International Semantic Web Conference (ISWC), Virtual Conference, 2020 <a href="./files/owl2bench.pdf" target="_blank" rel="noreferrer"> (pdf)</a></li>
-												<li> Gunjan Singh, Sutapa Mondal, Sumit Bhatia, Raghava Mutharaju, Neuro-Symbolic Techniques for Description Logic Reasoning, Accepted at Student Abstract, Association for the Advancement of Artificial Intelligence (AAAI), 2020 <a href="./files/AAAI.pdf" target="_blank" rel="noreferrer"> (pdf)</a></li>
-												<li> Gunjan Singh, Ashwat Kumar, Kanav Bhagat, Sumit Bhatia, Raghava Mutharaju, OWL2Bench: Towards a Customizable Benchmark for OWL 2 Reasoners,  Accepted at Posters Track, International Semantic Web Conference (ISWC), Virtual Conference, 2020 <a href="./files/owl2bench2.pdf" target="_blank" rel="noreferrer"> (pdf)</a></li>
-												<li> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju, A Benchmark for OWL 2 DL Reasoners, Accepted at Young Researchers' Symposium, CODS-COMAD, Hyderabad, 2020 <a href="./files/cods.pdf" target="_blank" rel="noreferrer"> (pdf)</a></li>
-												<li> Raj Kamal Yadav, Gunjan Singh, Raghava Mutharaju, Sumit Bhatia, Towards a Concurrent Approximate Description Logic Reasoner, Accepted at Posters Track, International Semantic Web Conference (ISWC), Auckland, 2019 <a href="./files/arc.pdf" target="_blank" rel="noreferrer"> (pdf)</a></li>
-												</ul>
-												
-									<li><h3 >Proceedings</h3></li>	
-										<ul >
-										<li>Raghava Mutharaju, Agnieszka Lawrynowicz, Pramit Bhattacharyya, Eva Blomqvist, Luigi Asprino, Gunjan Singh: Proceedings of the
-										14th Workshop on Ontology Design and Patterns (WOP 2023) co-located
-										with the 22nd International Semantic Web Conference (ISWC 2023), Athens, Greece, November 06, 2023. CEUR Workshop 
-										Proceedings 3636, CEUR-WS.org 2024<a href="https://ceur-ws.org/Vol-3636/" target="_blank" rel="noreferrer"> (link)</a></li>
-												<li> Debayan Banerjee, Ricardo Usbeck, Nandana Mihindukulasooriya, Gunjan Singh, Raghava Mutharaju, Pavan 
-												Kapanipathi: Joint Proceedings of Scholarly QALD 2023 and SemREC 2023 co-located with 22nd International 
-												Semantic Web Conference (ISWC), Athens, Greece, November 6-10, 2023. CEUR Workshop Proceedings 3592, 
-												CEUR-WS.org 2023<a href="https://ceur-ws.org/Vol-3592/" target="_blank" rel="noreferrer"> (link)</a></li>
-												<li> Gunjan Singh, Raghava Mutharaju, Pavan Kapanipathi, Nandana Mihindukulasooriya, Mohnish Dubey, Ricardo 
-												Usbeck, Debayan Banerjee: Joint Proceedings of SemREC 2022 and SMART 2022 co-located with 21st International 
-												Semantic Web Conference (ISWC), Hybrid event, Hangzhou, China, October 24-27, 2022. CEUR Workshop Proceedings 
-												3337, CEUR-WS.org 2023<a href="https://ceur-ws.org/Vol-3337/" target="_blank" rel="noreferrer"> (link)</a></li>
-												<li> Gunjan Singh, Raghava Mutharaju, Pavan Kapanipathi: Proceedings of the Semantic Reasoning Evaluation 
-												Challenge (SemREC 2021) co-located with the 20th International Semantic Web Conference (ISWC), Virtual Event, October 27th, 2021. 
-												CEUR Workshop Proceedings 3123, CEUR-WS.org 2022<a href="https://ceur-ws.org/Vol-3123/" target="_blank" rel="noreferrer"> (link)</a></li>
-												</ul>									
-										
-												
-										</ul>
-								
-								
-								
-							</article>
-							
-						<!-- Projects -->
-<article id="projects">
-	<h2 class="major">Projects</h2>
-	<ul>
-		<li>
-			<h3>OWL2Bench</h3>
-			<p>A customizable benchmark for OWL 2 reasoners. This project focuses on creating various benchmarking scenarios to evaluate the performance of different reasoners.</p>
-		</li>
-		<li>
-			<h3>ConfigOWL2Bench</h3>
-			<p>An extension of OWL2Bench that allows for dynamic configuration of benchmark parameters to tailor testing environments according to specific requirements.</p>
-		</li>
-		<li>
-			<h3>GenACT</h3>
-			<p>An ontology-based temporal web data generator designed to simulate academic conference tweets, providing data for research in temporal reasoning and knowledge graph evolution.</p>
-		</li>
-		<li>
-			<h3>Configurable Ontology Generator</h3>
-			<p>A tool for generating ontologies with customizable parameters to facilitate testing and development of ontology-based applications.</p>
-		</li>
-		<li>
-			<h3>NeSyBench</h3>
-			<p>A tool for generating ontologies with customizable parameters to facilitate testing and development of ontology-based applications.</p>
-		</li>
+  .graph-wrap{opacity:0; animation:fadeIn 1s ease forwards .5s;}
+  @keyframes fadeIn{to{opacity:1;}}
+  .graph-wrap svg{width:100%; height:auto; display:block; overflow:visible;}
+  #graph-outer{transition:transform .12s ease-out;}
+  .g-node{cursor:pointer;}
+  .g-edge{stroke:var(--line); stroke-width:1.4; transition:stroke .18s, stroke-width .18s;}
+  .g-edge-hot{stroke:var(--accent); stroke-width:1.8; stroke-dasharray:5 4; transition:stroke .18s, stroke-width .18s;}
+  .g-dot{fill:var(--surface); stroke:var(--primary); stroke-width:1.6; transition:r .18s, fill .18s, stroke .18s;}
+  .g-dot.hot{stroke:var(--accent);}
+  .g-node:hover .g-edge, .g-node:focus-visible .g-edge{stroke:var(--primary); stroke-width:2.2;}
+  .g-node:hover .g-edge-hot, .g-node:focus-visible .g-edge-hot{stroke:var(--primary); stroke-width:2.4;}
+  .g-node:hover .g-dot, .g-node:focus-visible .g-dot{fill:var(--primary); stroke:var(--ink); r:8;}
+  .g-node:hover .g-node-text, .g-node:focus-visible .g-node-text{fill:var(--primary-ink);}
+  .g-ring{fill:none; stroke:var(--accent); stroke-width:1; stroke-dasharray:3 4; opacity:.7;}
+  .g-center{fill:var(--surface); stroke:var(--primary); stroke-width:2;}
+  .g-center-text{
+    font-family:'Fraunces', serif; font-weight:600; font-size:22px; fill:var(--ink);
+  }
+  .g-node-text{
+    font-family:'IBM Plex Mono', monospace; font-size:11.5px; fill:var(--ink); font-weight:500;
+  }
+  .g-predicate{
+    font-family:'IBM Plex Mono', monospace; font-size:9.5px; fill:var(--primary); letter-spacing:.01em;
+  }
+  .g-predicate.hot{fill:#a3660c;}
 
-		<li>
-			<h3>TLDR</h3>
-			<p>A project aimed at developing a tool for summarizing large documents into concise and readable abstracts, making it easier for researchers to grasp key information quickly.</p>
-		</li>
-		<li>
-			<h3>ARC</h3>
-			<p>An advanced reasoning component designed to improve the efficiency and accuracy of knowledge graph reasoning tasks through innovative algorithms and techniques.</p>
-		</li>
-	</ul>
-</article>
+  /* ---------- Sections ---------- */
+  section{padding:56px 0; border-top:1px solid var(--line);}
+  section .wrap > .eyebrow{margin-bottom:6px;}
+  section h2.major{font-size:28px; margin-bottom:26px;}
+  .lede{max-width:70ch; color:var(--text);}
+  .lede + .lede{margin-top:14px;}
 
-							
-							
-						<!-- Work -->
-							<article id="workexperience">
-								<h2 class="major">Work Experience</h2>
-								<h3>Internships</h3>
-								<ul >
-								<li>LIRIS Lab, INSA, Lyon, France, Sep 2023 - Feb 2024, Mentor: <a href="https://riccardotommasini.com/"   target="_blank" rel="noreferrer">Dr. Riccardo Tommasini </a></li>	
-								</ul>
-								<ul >
-								<li>IBM India Research Lab, New Delhi, May 2019 - Jul 2019, Mentor: <a href="http://sumitbhatia.net/"   target="_blank" rel="noreferrer">Dr. Sumit Bhatia </a></li>	
-								</ul>
-								<h3>Academic Experience</h3>
-								<ul >
-								<li>Galgotias College of Engineering and Technology, Greater Noida, Aug 2016 - Dec 2018, Assistant Professor</li>
-								</ul>
+  /* Research tags */
+  .tag-cloud{display:flex; flex-wrap:wrap; gap:10px; margin-top:24px;}
+  .tag{
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px;
+    border:1px solid var(--line); background:var(--surface);
+    padding:7px 12px; border-radius:20px; color:var(--text);
+  }
+  .tag.on{border-color:var(--accent); background:var(--accent-soft); color:var(--ink);}
+
+  /* Timeline */
+  .timeline{list-style:none; margin:0; padding:0; border-left:1.4px solid var(--line); margin-left:6px;}
+  .timeline li{position:relative; padding:0 0 30px 26px;}
+  .timeline li:last-child{padding-bottom:0;}
+  .timeline li::before{
+    content:""; position:absolute; left:-6px; top:4px;
+    width:10px; height:10px; border-radius:50%;
+    background:var(--surface); border:2px solid var(--primary);
+  }
+  .timeline li.current::before{background:var(--accent); border-color:var(--accent);}
+  .tl-period{font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--muted); letter-spacing:.03em;}
+  .tl-role{font-family:'Fraunces', serif; font-weight:600; color:var(--ink); font-size:18px; margin-top:3px;}
+  .tl-org{font-size:14.5px; color:var(--text); margin-top:2px;}
+  .tl-org a{text-decoration:none; border-bottom:1px dotted var(--primary);}
+  .tl-note{font-size:14px; color:var(--muted); margin-top:4px;}
+  .pill-current{
+    font-family:'IBM Plex Mono', monospace; font-size:10.5px;
+    background:var(--accent); color:#2a1c02; padding:1px 7px; border-radius:10px;
+    margin-left:8px; letter-spacing:.03em; vertical-align:2px;
+  }
+
+  /* Publications */
+  .pub-links{display:flex; gap:18px; align-items:center; margin-bottom:22px; flex-wrap:wrap;}
+  .pub-links a{
+    font-family:'IBM Plex Mono', monospace; font-size:13px; text-decoration:none;
+    display:inline-flex; align-items:center; gap:6px; color:var(--text);
+    border-bottom:1px solid transparent;
+  }
+  .pub-links a:hover{color:var(--primary-ink); border-color:var(--accent);}
+  .pub-links svg{width:14px; height:14px;}
+  h3.pub-group{
+    font-family:'IBM Plex Mono', monospace; text-transform:uppercase;
+    font-size:12.5px; letter-spacing:.08em; color:var(--muted); font-weight:500;
+    margin:30px 0 14px; padding-top:2px;
+  }
+  h3.pub-group:first-of-type{margin-top:0;}
+  ol.pub-list{list-style:none; margin:0; padding:0; counter-reset:pub;}
+  ol.pub-list li{
+    counter-increment:pub;
+    padding:14px 0 14px 40px;
+    border-top:1px solid var(--line);
+    position:relative;
+    font-size:15px;
+  }
+  ol.pub-list li:first-child{border-top:none;}
+  ol.pub-list li::before{
+    content:counter(pub, decimal-leading-zero);
+    position:absolute; left:0; top:15px;
+    font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--accent);
+  }
+  ol.pub-list .pub-title{color:var(--ink); font-weight:600;}
+  ol.pub-list .pub-meta{color:var(--muted); font-size:13.5px; margin-top:3px;}
+  ol.pub-list a.pub-link{font-family:'IBM Plex Mono', monospace; font-size:12.5px; text-decoration:none; margin-left:4px;}
+  .disclaimer{
+    margin-top:24px; padding:14px 16px; border-left:2px solid var(--line);
+    color:var(--muted); font-size:13px; font-style:italic; line-height:1.6;
+  }
+
+  /* Recognition */
+  .rec-list{list-style:none; margin:0; padding:0;}
+  .rec-list li{
+    display:grid; grid-template-columns:22px 1fr; gap:12px;
+    padding:12px 0; border-top:1px solid var(--line); font-size:15px;
+  }
+  .rec-list li:first-child{border-top:none;}
+  .rec-list li::before{content:"⊨"; color:var(--accent); font-family:'IBM Plex Mono', monospace;}
+
+  /* Footer */
+  footer.site-footer{
+    border-top:1px solid var(--line);
+    padding:44px 0 50px;
+    background:var(--ink);
+  }
+  footer.site-footer .wrap{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:20px;
+  }
+  footer .foot-text{color:#dcb7cf; font-family:'IBM Plex Mono', monospace; font-size:13px;}
+  footer .foot-text b{color:#fff; font-weight:500;}
+  ul.icons{list-style:none; display:flex; gap:8px; margin:0; padding:0; flex-wrap:wrap;}
+  ul.icons a{
+    width:38px; height:38px; border-radius:50%; border:1px solid #6d3159;
+    display:flex; align-items:center; justify-content:center; text-decoration:none;
+    color:#e6bcd8; transition:border-color .15s, color .15s;
+  }
+  ul.icons a:hover{border-color:var(--accent); color:var(--accent);}
+  ul.icons svg{width:16px; height:16px;}
+
+  /* Mobile */
+  @media (max-width:760px){
+    .nav-inner{padding:12px 20px;}
+    nav.nav-links{
+      position:fixed; inset:57px 0 auto 0; background:var(--surface);
+      flex-direction:column; padding:18px 24px; gap:16px;
+      border-bottom:1px solid var(--line);
+      transform:translateY(-8px); opacity:0; pointer-events:none;
+      transition:opacity .15s, transform .15s;
+    }
+    #nav-toggle:checked ~ nav.nav-links{opacity:1; transform:translateY(0); pointer-events:auto;}
+    .nav-burger{
+      display:flex; flex-direction:column; gap:4px; background:none; border:none;
+      cursor:pointer; padding:8px;
+    }
+    .nav-burger span{width:20px; height:2px; background:var(--ink); display:block;}
+    .hero-grid{grid-template-columns:1fr;}
+    .graph-wrap{order:-1; max-width:280px; margin:0 auto 10px;}
+    section h2.major{font-size:24px;}
+    footer.site-footer .wrap{flex-direction:column; align-items:flex-start;}
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a class="nav-mark" href="#top">GS<b>·</b>ISE</a>
+    <input type="checkbox" id="nav-toggle">
+    <label class="nav-burger" for="nav-toggle" aria-label="Toggle navigation"><span></span><span></span><span></span></label>
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#experience">Experience</a>
+      <a href="#publications">Publications</a>
+      <a href="#activities">Activities</a>
+    </nav>
+    <a class="nav-cv" href="https://raw.githubusercontent.com/GunjanSingh1/GunjanSingh1.github.io/main/files/cv.pdf" target="_blank" rel="noreferrer">Download CV</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero" style="border-top:none;">
+    <div class="wrap hero-grid">
+      <div>
+        <h1>Gunjan&nbsp;Singh</h1>
+        <p class="role">
+          Postdoctoral Researcher, Information Service Engineering (ISE)<br>
+          <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering" target="_blank" rel="noreferrer">FIZ Karlsruhe – Leibniz Institute for Information Infrastructure</a><br>
+          with <a href="https://www.fiz-karlsruhe.de/en/bereiche/lebenslauf-prof-dr-harald-sack" target="_blank" rel="noreferrer">Prof.&nbsp;Dr.&nbsp;Harald&nbsp;Sack</a> · also AIFB, Karlsruhe Institute of Technology
+        </p>
+        <p class="tagline">I build and benchmark reasoners for OWL&nbsp;2 ontologies — working across ontology reasoning, benchmark design, and neuro‑symbolic reasoning, where symbolic inference meets learned models.</p>
+        <div class="hero-links">
+          <a class="btn btn-primary" href="#publications">View publications</a>
+          <a class="btn btn-ghost" href="mailto:gunjans@iiitd.ac.in">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="graph-wrap" aria-hidden="true">
+        <!-- A small, literal knowledge graph describing the subject of this page —
+             center node = Gunjan (photo), edges = real RDF-style predicates.
+             Hover/focus a node to highlight its edge; move the cursor over the
+             hero to nudge the graph (disabled under prefers-reduced-motion). -->
+        <svg viewBox="0 0 380 356" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <clipPath id="photoClip"><circle cx="190" cy="178" r="34"/></clipPath>
+          </defs>
+
+          <g id="graph-outer">
+            <g class="g-node" tabindex="0">
+              <line class="g-edge" x1="190" y1="178" x2="190" y2="50"/>
+              <text class="g-predicate" x="198" y="114" text-anchor="start">a</text>
+              <circle class="g-dot" cx="190" cy="50" r="5.5"/>
+              <text class="g-node-text" x="190" y="30" text-anchor="middle">Postdoctoral</text>
+              <text class="g-node-text" x="190" y="43" text-anchor="middle">Researcher</text>
+            </g>
+
+            <g class="g-node" tabindex="0">
+              <line class="g-edge" x1="190" y1="178" x2="301" y2="114"/>
+              <text class="g-predicate" x="248" y="140" text-anchor="middle">:worksWith</text>
+              <circle class="g-dot" cx="301" cy="114" r="5.5"/>
+              <text class="g-node-text" x="313" y="111" text-anchor="start">Harald Sack</text>
+              <text class="g-predicate" x="313" y="125" text-anchor="start">FIZ&#160;ISE&#160;/&#160;AIFB</text>
+            </g>
+
+            <g class="g-node" tabindex="0">
+              <line class="g-edge" x1="190" y1="178" x2="301" y2="242"/>
+              <text class="g-predicate" x="248" y="216" text-anchor="middle">:specializesIn</text>
+              <circle class="g-dot" cx="301" cy="242" r="5.5"/>
+              <text class="g-node-text" x="313" y="239" text-anchor="start">Neuro-Symbolic</text>
+              <text class="g-node-text" x="313" y="252" text-anchor="start">AI</text>
+            </g>
+
+            <g class="g-node" tabindex="0">
+              <line class="g-edge-hot" x1="190" y1="178" x2="190" y2="306"/>
+              <text class="g-predicate hot" x="198" y="246" text-anchor="start">:specializesIn</text>
+              <circle class="g-dot hot" cx="190" cy="306" r="6"/>
+              <text class="g-node-text" x="190" y="328" text-anchor="middle">Benchmarking</text>
+            </g>
+
+            <g class="g-node" tabindex="0">
+              <line class="g-edge" x1="190" y1="178" x2="79" y2="242"/>
+              <text class="g-predicate" x="132" y="216" text-anchor="middle">:specializesIn</text>
+              <circle class="g-dot" cx="79" cy="242" r="5.5"/>
+              <text class="g-node-text" x="67" y="239" text-anchor="end">Ontology</text>
+              <text class="g-node-text" x="67" y="252" text-anchor="end">Reasoning</text>
+            </g>
+
+            <g class="g-node" tabindex="0">
+              <line class="g-edge" x1="190" y1="178" x2="79" y2="114"/>
+              <text class="g-predicate" x="132" y="140" text-anchor="middle">:worksAt</text>
+              <circle class="g-dot" cx="79" cy="114" r="5.5"/>
+              <text class="g-node-text" x="67" y="111" text-anchor="end">FIZ Karlsruhe</text>
+              <text class="g-predicate" x="67" y="125" text-anchor="end">Information Service Eng.</text>
+            </g>
+          </g>
+
+          <!-- center node: Gunjan (fixed anchor — doesn't move with the cursor) -->
+          <circle class="g-ring" cx="190" cy="178" r="45"/>
+          <circle class="g-center" cx="190" cy="178" r="36"/>
+          <image href="assets/profile.jpg" x="156" y="144" width="68" height="68"
+                 clip-path="url(#photoClip)" preserveAspectRatio="xMidYMid slice"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="wrap">
+      <p class="eyebrow">Profile</p>
+      <h2 class="major">About</h2>
+      <p class="lede">I'm a postdoctoral researcher in the Information Service Engineering group at <a href="https://www.fiz-karlsruhe.de/" target="_blank" rel="noreferrer">FIZ Karlsruhe – Leibniz Institute for Information Infrastructure</a>, working with Prof. Dr. Harald Sack. My work centers on <strong>ontology reasoning</strong>, <strong>benchmarking</strong>, and <strong>neuro-symbolic reasoning</strong> — building the tools and datasets needed to evaluate how reasoners handle expressive OWL 2 ontologies, at scale and under change.</p>
+      <p class="lede">I completed my PhD at the <a href="https://www.iiitd.ac.in/" target="_blank" rel="noreferrer">Indraprastha Institute of Information Technology (IIIT), Delhi</a>, where I was also an <a href="https://www.research.ibm.com/university/awards/fellowships-awardees.html" target="_blank" rel="noreferrer">IBM Research Fellow</a>, advised by <a href="http://faculty.iiitd.ac.in/~raghavam" target="_blank" rel="noreferrer">Dr. Raghava Mutharaju</a> (IIIT Delhi) and <a href="http://sumitbhatia.net/" target="_blank" rel="noreferrer">Dr. Sumit Bhatia</a> (Adobe Research, India). My doctoral research introduced benchmarks for description logic reasoners spanning static, streaming, and neuro-symbolic settings, giving me a broad grounding in OWL 2 modeling, tableau- and rule-based reasoning, SPARQL query engines, temporal and stream reasoning, and neuro-symbolic methods for knowledge graph completion and deductive/inductive reasoning.</p>
+      <p class="lede">Before my PhD, I spent 2.5 years as an Assistant Professor at <a href="https://galgotiacollege.edu/" target="_blank" rel="noreferrer">Galgotias College of Engineering and Technology (AKTU)</a>. I hold a Master's — with two gold medals — and a Bachelor's in Computer Engineering, both from <a href="https://www.amu.ac.in/" target="_blank" rel="noreferrer">Aligarh Muslim University</a>, India.</p>
+
+      <div class="tag-cloud">
+        <span class="tag on">Ontology Reasoning</span>
+        <span class="tag on">Benchmarking</span>
+        <span class="tag on">Neuro-Symbolic AI</span>
+        <span class="tag">OWL 2 / Description Logics</span>
+        <span class="tag">Knowledge Graphs</span>
+        <span class="tag">Stream &amp; Temporal Reasoning</span>
+        <span class="tag">SPARQL</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE -->
+  <section id="experience">
+    <div class="wrap">
+      <p class="eyebrow">Timeline</p>
+      <h2 class="major">Experience</h2>
+      <ul class="timeline">
+        <li class="current">
+          <div class="tl-period">Current</div>
+          <div class="tl-role">Postdoctoral Researcher <span class="pill-current">now</span></div>
+          <div class="tl-org">Information Service Engineering (ISE), <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering" target="_blank" rel="noreferrer">FIZ Karlsruhe</a> — with Prof. Dr. Harald Sack</div>
+          <div class="tl-note">Ontology reasoning, benchmarking, and neuro-symbolic reasoning.</div>
+        </li>
+        <li>
+          <div class="tl-period">Sep 2023 – Feb 2024</div>
+          <div class="tl-role">Research Internship</div>
+          <div class="tl-org">LIRIS Lab, INSA Lyon, France — with <a href="https://riccardotommasini.com/" target="_blank" rel="noreferrer">Dr. Riccardo Tommasini</a></div>
+        </li>
+        <li>
+          <div class="tl-period">Aug 2020 – Aug 2022</div>
+          <div class="tl-role">IBM PhD Fellow</div>
+          <div class="tl-org">IBM Research — 2-year IBM PhD Fellowship, awarded alongside doctoral studies</div>
+        </li>
+        <li>
+          <div class="tl-period">Doctoral studies</div>
+          <div class="tl-role">PhD Researcher</div>
+          <div class="tl-org">IIIT Delhi — advised by Dr. Raghava Mutharaju and Dr. Sumit Bhatia</div>
+          <div class="tl-note">Benchmarks for description logic reasoners: static, streaming, and neuro-symbolic.</div>
+        </li>
+        <li>
+          <div class="tl-period">May 2019 – Jul 2019</div>
+          <div class="tl-role">Research Internship</div>
+          <div class="tl-org">IBM India Research Lab, New Delhi — with <a href="http://sumitbhatia.net/" target="_blank" rel="noreferrer">Dr. Sumit Bhatia</a></div>
+        </li>
+        <li>
+          <div class="tl-period">Aug 2016 – Dec 2018</div>
+          <div class="tl-role">Assistant Professor</div>
+          <div class="tl-org">Galgotias College of Engineering and Technology (AKTU)</div>
+        </li>
+        <li>
+          <div class="tl-period">2016 · 2014</div>
+          <div class="tl-role">M.Tech &amp; B.Tech, Computer Science / Engineering</div>
+          <div class="tl-org">Aligarh Muslim University, India — M.Tech with two gold medals</div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PUBLICATIONS -->
+  <section id="publications">
+    <div class="wrap">
+      <p class="eyebrow">⊨ Bibliography</p>
+      <h2 class="major">Publications</h2>
+
+      <div class="pub-links">
+        <a href="https://scholar.google.com/citations?user=svepziAAAAAJ&hl=en" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3L1 9l4 2.2v6L12 21l7-3.8v-6l2-1.1V15h1V9L12 3zm6.1 6L12 12.6 5.9 9 12 5.4 18.1 9zM17 15.3L12 18l-5-2.7v-4l5 2.7 5-2.7v4z"/></svg>
+          Google Scholar
+        </a>
+        <a href="https://dblp.uni-trier.de/pid/217/5394.html" target="_blank" rel="noreferrer">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 4h6v2H6v12h4v2H4V4zm10 0h6v16h-6v-2h4V6h-4V4z"/></svg>
+          DBLP
+        </a>
+      </div>
+
+      <h3 class="pub-group">Conference &amp; Journal Papers</h3>
+      <ol class="pub-list">
+        <li><span class="pub-title">OWL2Gen: Towards a Configurable Ontology Generator for Benchmarking.</span> Gunjan Singh, Ashwat Kumar, Sumit Bhatia, Raghava Mutharaju. Poster &amp; Demo Track, 43rd International Conference on Conceptual Modeling (ER), Pittsburgh, PA, 2024.</li>
+        <li><span class="pub-title">GenACT: An Ontology-Based Temporal Web Data Generator.</span> Gunjan Singh, Riccardo Tommasini, Sumit Bhatia, Raghava Mutharaju. 43rd International Conference on Conceptual Modeling (ER), LNCS, Springer, 2024.</li>
+        <li><span class="pub-title">Benchmarking Neuro-Symbolic Description Logic Reasoners: Existing Challenges and A Way Forward.</span> Gunjan Singh, Udit Arora, Shashikant Kumar, Riccardo Tommasini, Pieter Bonte, Sumit Bhatia, Raghava Mutharaju. Neurosymbolic Artificial Intelligence (NAI) Journal.</li>
+        <li><span class="pub-title">Benchmarking Symbolic and Neuro-Symbolic Description Logic Reasoners.</span> Gunjan Singh. Doctoral Consortium, 22nd International Semantic Web Conference (ISWC), 2023. <a class="pub-link" href="https://ceur-ws.org/Vol-3678/paper11.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">Neuro-Symbolic RDF and Description Logic Reasoners: State-of-the-Art and Challenges.</span> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju. Book chapter, <em>Neuro-Symbolic Artificial Intelligence: The State of the Art</em>, IOS Press, 2022. <a class="pub-link" href="https://arxiv.org/pdf/2308.04814" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">OWL2Bench: A Benchmark for OWL 2 Reasoners.</span> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju. Resources Track, ISWC 2020. <a class="pub-link" href="./files/owl2bench.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">Neuro-Symbolic Techniques for Description Logic Reasoning.</span> Gunjan Singh, Sutapa Mondal, Sumit Bhatia, Raghava Mutharaju. Student Abstract, AAAI 2020. <a class="pub-link" href="./files/AAAI.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">OWL2Bench: Towards a Customizable Benchmark for OWL 2 Reasoners.</span> Gunjan Singh, Ashwat Kumar, Kanav Bhagat, Sumit Bhatia, Raghava Mutharaju. Posters Track, ISWC 2020. <a class="pub-link" href="./files/owl2bench2.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">A Benchmark for OWL 2 DL Reasoners.</span> Gunjan Singh, Sumit Bhatia, Raghava Mutharaju. Young Researchers' Symposium, CODS-COMAD, Hyderabad, 2020. <a class="pub-link" href="./files/cods.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+        <li><span class="pub-title">Towards a Concurrent Approximate Description Logic Reasoner.</span> Raj Kamal Yadav, Gunjan Singh, Raghava Mutharaju, Sumit Bhatia. Posters Track, ISWC 2019, Auckland. <a class="pub-link" href="./files/arc.pdf" target="_blank" rel="noreferrer">pdf ↗</a></li>
+      </ol>
+
+      <h3 class="pub-group">Edited Proceedings</h3>
+      <ol class="pub-list">
+        <li><span class="pub-title">Proceedings of the 14th Workshop on Ontology Design and Patterns (WOP 2023),</span> co-located with ISWC 2023, Athens. Raghava Mutharaju, Agnieszka Ławrynowicz, Pramit Bhattacharyya, Eva Blomqvist, Luigi Asprino, Gunjan Singh (eds). CEUR-WS Vol. 3636, 2024. <a class="pub-link" href="https://ceur-ws.org/Vol-3636/" target="_blank" rel="noreferrer">link ↗</a></li>
+        <li><span class="pub-title">Joint Proceedings of Scholarly QALD 2023 and SemREC 2023,</span> co-located with ISWC 2023, Athens. Debayan Banerjee, Ricardo Usbeck, Nandana Mihindukulasooriya, Gunjan Singh, Raghava Mutharaju, Pavan Kapanipathi (eds). CEUR-WS Vol. 3592, 2023. <a class="pub-link" href="https://ceur-ws.org/Vol-3592/" target="_blank" rel="noreferrer">link ↗</a></li>
+        <li><span class="pub-title">Joint Proceedings of SemREC 2022 and SMART 2022,</span> co-located with ISWC 2022, Hangzhou. Gunjan Singh, Raghava Mutharaju, Pavan Kapanipathi, Nandana Mihindukulasooriya, Mohnish Dubey, Ricardo Usbeck, Debayan Banerjee (eds). CEUR-WS Vol. 3337, 2023. <a class="pub-link" href="https://ceur-ws.org/Vol-3337/" target="_blank" rel="noreferrer">link ↗</a></li>
+        <li><span class="pub-title">Proceedings of the Semantic Reasoning Evaluation Challenge (SemREC 2021),</span> co-located with ISWC 2021. Gunjan Singh, Raghava Mutharaju, Pavan Kapanipathi (eds). CEUR-WS Vol. 3123, 2022. <a class="pub-link" href="https://ceur-ws.org/Vol-3123/" target="_blank" rel="noreferrer">link ↗</a></li>
+      </ol>
+
+      <p class="disclaimer">This material is presented to ensure timely dissemination of scholarly work. Copyright and all rights are retained by the authors or other copyright holders; please respect the terms of each publisher when redistributing.</p>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES -->
+  <section id="activities">
+    <div class="wrap">
+      <p class="eyebrow">Recognition</p>
+      <h2 class="major">Activities</h2>
+      <ul class="rec-list">
+        <li>Organized the Semantic Reasoning Evaluation Challenge (SemREC) three times, at ISWC 2021, 2022, and 2023.</li>
+        <li>Organizing Committee member, 14th Workshop on Ontology Design and Patterns (WOP) 2023, ISWC 2023.</li>
+        <li>Sub-reviewer for CIKM 2022, ESWC 2023, ACL 2023, ISWC 2022, ICKG 2022, AAAI 2023, TheWebConf 2023, and NeSy 2024.</li>
+        <li>Head Teaching Assistant, Semantic Web &amp; Information Retrieval courses, Winter 2020–21, 2021–22, and 2023–24 — evaluated assignments and exams, designed questions, and supported students.</li>
+        <li>Qualified UGC-NET, November 2017.</li>
+        <li>University Postgraduate Gold Medal, M.Tech Computer Science &amp; Engineering, AMU, 2016.</li>
+        <li>University Postgraduate Gold Medal, first rank across all branches, M.Tech, AMU, 2016.</li>
+        <li>Qualified GATE 2014 with a 98.37 percentile.</li>
+      </ul>
+    </div>
+  </section>
 
 
-							</article>
+</main>
 
-						<!-- Activities and Awards -->
-							<article id="activities">
-								<h2 class="major">Activities and Awards</h2>
-								<ul >
-								<li> Organized Semantic Reasoning Evaluation Challenge (SemREC) thrice at ISWC 2021, 2022, and 2023. </li>
-								<li> Organizing Committee member for the 14th Workshop on Ontology Design and Patterns (WOP) 2023 at ISWC 2023. </li>
-								<li> Sub reviewer for prestigious conferences and workshops, including CIKM 2022, ESWC 2023, ACL 2023, ISWC 2022, ICKG 2022, AAAI 2023, TheWebConf 2023 and NeSy2024</li>
-								<li>  Head Teaching Assistant for the Semantic Web Course and Information Retrieval during the Winter Semesters of 2020-2021, 2021-2022 and 2023-24. 
-								Responsibilities included evaluating assignments and exams, designing questions, and assisting students in mastering course material. </li>
-								<li>    Received 2-year 2020 IBM Research Fellowship</em></li>
-								<li>    Qualified UGC-NET November, 2017</li>
-								<li>	Awarded University Postgraduate Gold Medal for securing first rank in M.Tech Computer Science and Engineering 2016, AMU</li>
-								<li>	Awarded University Postgraduate Gold Medal for securing first rank in M.Tech (among all branches) 2016, AMU</li>
-								<li>	Qualified Graduate Aptitude Test in Engineering (GATE) 2014 with 98.37 percentile</li>
-
-								</ul>
-
-
-							</article>
-
-						<!-- News -->
-							<article id="news">
-								<h2 class="major">News</h2>
-								<ul >
-								<li>November 2023: Organizing Committee member for the 14th Workshop on Ontology Design and Patterns (WOP) 2023 at ISWC 2023. </li>
-								<li>November 2023: Attended International Semantic Web Conference (ISWC) 2023</li>
-<li>November 2023: Organized third edition of Semantic Reasoning Evaluation Challenge (SemREC) 2023 at ISWC 2023</li>
-<li>November 2023: Got the student grant for ISWC 2023</li>
-								<li>January 2023: Attended Google Research Week 2023</li>
-<li>January 2023: Attended IBM Neuro-Symbolic AI Workshop 2023</li>
-<li>December 2022: Attended Asian Conference on Machine Learning (ACML) 2022</li>
-<li>November 2022: Attended International Semantic Web Conference (ISWC) 2022</li>
-<li>November 2022: Organized second edition of Semantic Reasoning Evaluation Challenge (SemREC) 2022 at ISWC 2022</li>
-<li>November 2022: Got the student grant for ISWC 2022</li>
-<li>July 2022: Attended the ACM-W Grad Cohort 2022</li>
-
-								<li>September 2021: Attended <a  href="https://dai.fmph.uniba.sk/events/dl2021/" target="_blank" rel="noreferrer">34th International Workshop on Description Logics 2021</a></li>
-								<li>September 2021: Attended <a  href="https://armacad.info/2021-05-15--reasoning-web-summer-school-8-15-september-2021-leuven-belgium" target="_blank" rel="noreferrer">Reasoning Web Summer School 2021</a></li>
-								<li>July 2021: Gave a talk at <a href="./files/fdp.pdf" target="_blank" rel="noreferrer"> AICTE ATAL FDP "Advanced Semantic Intelligence: The Way Forward with Artificial Intelligence (Part II)</a> on the topic "Ontology Benchmarking".</li>
-								<li>June 2021: Attended and Volunteered at <a  href="https://2021.eswc-conferences.org/" target="_blank" rel="noreferrer"> ESWC 2021 </a></li>
-								<li>April 2021: Organizing <a  href="https://semrec.github.io/" target="_blank" rel="noreferrer"> Semantic Reasoning Evaluation Challenge (SemREC)</a> at <a  href="https://iswc2021.semanticweb.org/" target="_blank" rel="noreferrer">ISWC 2021</a></li>
-								<li>February 2021: Attended <a  href="https://aaai.org/Conferences/AAAI-21/" target="_blank" rel="noreferrer">AAAI 2021</a> and presented my paper “Neuro-Symbolic Techniques for Description Logic Reasoning”.</li>
-								<li>January 2021: Selected as student volunteer for <a  href="https://aaai.org/Conferences/AAAI-21/" target="_blank" rel="noreferrer">AAAI 2021</a>.</li>
-								<li>January 2021: Attended workshop on <a  href="https://aiw.iiitd.ac.in/" target="_blank" rel="noreferrer">Trustworthiness of AI systems and its impact on Society in Developing Nations</a>.</li>
-								<li>November 2020: Paper on “Neuro-Symbolic Techniques for Description Logic Reasoning” accepted as a student abstract at <a  href="https://aaai.org/Conferences/AAAI-21/" target="_blank" rel="noreferrer">AAAI 2021</a>.</li>
-								<li>November 2020: Attended <a  href="https://iswc2020.semanticweb.org/" target="_blank" rel="noreferrer">ISWC 2020</a> and presented my papers'OWL2Bench: A Benchmark for OWL 2 Reasoners' and 'OWL2Bench: Towards a Customizable Benchmark for OWL 2 Reasoner'.</li>
-								<li>October 2020: Got the student grant for <a  href="https://iswc2020.semanticweb.org/" target="_blank" rel="noreferrer">ISWC 2020</a>.</li>
-								<li>September 2020: Paper on 'OWL2Bench: A Benchmark for OWL 2 Reasoners' accepted at the International Semantic Web Conference (ISWC), 2020 Resources Track.</li>
-								<li>September 2020: Paper on 'OWL2Bench: Towards a Customizable Benchmark for OWL 2 Reasoner' accepted at the International Semantic Web Conference (ISWC), 2020 Poster Track.</li>
-								<li>July 2020: Attended the IEEE Signal Processing Society Workshop on Deep Learning and Reinforcement Learning using MATLAB
-								<li>July 2020: Attended the ACM-W Grad Cohort 2020.</li>
-								<li>May 2020: Attended Knowledge Graph Conference 2020.</li>
-								<li>April 2020: Attended Women in Data Science Workshop at ICDE 2020.</li>
-								<li>March 2020: Awarded <a   https://www.research.ibm.com/university/awards/fellowships-awardees.html#example2-tab1" target="_blank" rel="noreferrer">IBM PhD Fellowship </a> for two years (Aug 2020 - Aug 2022).</li>
-								<li>January 2020: Attended <a  href="https://cods-comad.in/2020/index.html" target="_blank" rel="noreferrer">CODS-COMAD 2020 </a> in Hyderabad, India and presented my paper on OWL2Bench: A Benchmark for OWL 2 DL Ontologies.</li>
-								<li>October 2019: Our work 'A Benchmark for OWL 2 DL Reasoners' has been accepted at the Young Researchers' Symposium in CODS-COMAD, 2020 to be held at Hyderabad, India </li>
-								<li>August 2019: Our work 'Towards a Concurrent Approximate Description Logic Reasoner' has been accepted at the Posters Track in <a  href="https://iswc2020.semanticweb.org/" target="_blank" rel="noreferrer">ISWC 2019</a>  to be held at Auckland, New Zealand.</li>
-								<li>July 2019: Attended the ACM-W Grad Cohort 2019 held at IIT Delhi, India.</li>
-								<li>June 2019: Attended <a  href="http://www.rinai.iitmandi.ac.in/" target="_blank" rel="noreferrer">The Second Summer School on Representation in Artificial Intelligence (RinAI)</a>, Jun 6-13, 2019 in IIT Mandi, India.</li>
-								</ul>
-
-
-							</article>
-
-					<!-- CV Download Button -->
-<article id="cv">
-    <h2 class="major">CV</h2>
-    <p>You can download my CV by clicking the button below:</p>
-    <a href="https://raw.githubusercontent.com/GunjanSingh1/GunjanSingh1.github.io/main/files/cv.pdf" class="button" download>Download CV</a>
-</article>
-
-
-					</div>
-
-				<!-- Footer -->
-<footer id="footer">
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-text"><b>Gunjan Singh</b><br>Information Service Engineering, FIZ Karlsruhe</div>
     <ul class="icons">
-        <li><a href="mailto:gunjans@iiitd.ac.in" target="_blank" rel="noreferrer" class="icon fa-envelope"><span class="label">Email</span></a></li>
-        <li><a href="https://www.linkedin.com/in/gunjan-singh-7a8a59186/" target="_blank" rel="noreferrer" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-        <li><a href="https://github.com/GunjanSingh1" target="_blank" rel="noreferrer" class="icon fa-github"><span class="label">GitHub</span></a></li>
-        <li><a href="https://twitter.com/GunjanS12/" target="_blank" rel="noreferrer" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="https://raw.githubusercontent.com/GunjanSingh1/GunjanSingh1.github.io/main/files/cv.pdf" target="_blank" rel="noreferrer" class="icon fa-file"><span class="label">CV</span></a></li>
+      <li><a href="mailto:gunjans@iiitd.ac.in" aria-label="Email">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+      </a></li>
+      <li><a href="https://www.linkedin.com/in/gunjan-singh-7a8a59186/" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 11-.02 5 2.5 2.5 0 01.02-5zM3 9h4v12H3V9zm7 0h3.8v1.7h.05c.53-.95 1.83-1.95 3.77-1.95 4.03 0 4.77 2.5 4.77 5.75V21h-4v-5.6c0-1.34-.03-3.06-1.87-3.06-1.87 0-2.15 1.46-2.15 2.96V21h-4V9z"/></svg>
+      </a></li>
+      <li><a href="https://github.com/GunjanSingh1" target="_blank" rel="noreferrer" aria-label="GitHub">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-3.16 19.5c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.1.39-1.99 1.03-2.69-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 015 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.69 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0012 2z"/></svg>
+      </a></li>
+      <li><a href="https://twitter.com/GunjanS12/" target="_blank" rel="noreferrer" aria-label="Twitter / X">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7.3 8.34L21.5 21h-6.4l-5-6.5-5.7 6.5H1.4l7.8-8.9L1 3h6.5l4.5 6 5.5-6zM16.3 19.2h1.7L7.8 4.7H6l10.3 14.5z"/></svg>
+      </a></li>
+      <li><a href="https://raw.githubusercontent.com/GunjanSingh1/GunjanSingh1.github.io/main/files/cv.pdf" target="_blank" rel="noreferrer" aria-label="Download CV">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3v12m0 0l-4-4m4 4l4-4M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+      </a></li>
     </ul>
+  </div>
 </footer>
 
+<script>
+(function(){
+  var hero = document.querySelector('.hero');
+  var svg = document.querySelector('.graph-wrap svg');
+  var outer = document.getElementById('graph-outer');
+  if(!hero || !svg || !outer) return;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce) return;
 
-			</div>
-
-		<!-- BG -->
-			<div id="bg"></div>
-			<!-- <div id="particles-js"></div> -->
-
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<!-- <script src="assets/js/particles.js"></script> -->
-
-	</body>
+  var raf = null;
+  function move(e){
+    var rect = svg.getBoundingClientRect();
+    var cx = rect.left + rect.width / 2;
+    var cy = rect.top + rect.height / 2;
+    var dx = (e.clientX - cx) / rect.width;
+    var dy = (e.clientY - cy) / rect.height;
+    var max = 12;
+    if(raf) cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(function(){
+      outer.setAttribute('transform', 'translate(' + (dx * max).toFixed(2) + ',' + (dy * max).toFixed(2) + ')');
+    });
+  }
+  function reset(){
+    if(raf) cancelAnimationFrame(raf);
+    outer.setAttribute('transform', 'translate(0,0)');
+  }
+  hero.addEventListener('mousemove', move);
+  hero.addEventListener('mouseleave', reset);
+})();
+</script>
+</body>
 </html>
-
-
-
-	
