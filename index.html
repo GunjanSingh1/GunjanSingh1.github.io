@@ -221,6 +221,23 @@
     background:var(--accent); color:#2a1c02; padding:1px 7px; border-radius:10px;
     margin-left:8px; letter-spacing:.03em; vertical-align:2px;
   }
+  ul.tl-sub{
+    list-style:none; margin:16px 0 0 2px; padding:0;
+    border-left:1.4px solid var(--line);
+    display:flex; flex-direction:column; gap:16px;
+  }
+  ul.tl-sub li{position:relative; padding:0 0 0 20px;}
+  ul.tl-sub li::before{
+    content:""; position:absolute; left:-5px; top:3px;
+    width:8px; height:8px; border-radius:50%;
+    background:var(--surface); border:1.6px solid var(--accent);
+  }
+  .tl-sub-period{
+    font-family:'IBM Plex Mono', monospace; font-size:11px;
+    color:var(--muted); letter-spacing:.03em;
+  }
+  .tl-sub-role{font-family:'Fraunces', serif; font-weight:600; color:var(--ink); font-size:14.5px; margin-top:2px;}
+  .tl-sub-org{font-size:13px; color:var(--text); margin-top:2px;}
 
   /* Publications */
   .pub-links{display:flex; gap:18px; align-items:center; margin-bottom:22px; flex-wrap:wrap;}
@@ -451,31 +468,37 @@
       <h2 class="major">Experience</h2>
       <ul class="timeline">
         <li class="current">
-          <div class="tl-period">Current</div>
+          <div class="tl-period">Feb 2025 – Current</div>
           <div class="tl-role">Postdoctoral Researcher <span class="pill-current">now</span></div>
           <div class="tl-org">Information Service Engineering (ISE), <a href="https://www.fiz-karlsruhe.de/en/forschung/information-service-engineering" target="_blank" rel="noreferrer">FIZ Karlsruhe</a> — with Prof. Dr. Harald Sack</div>
           <div class="tl-note">Ontology reasoning, benchmarking, and neuro-symbolic reasoning.</div>
         </li>
         <li>
-          <div class="tl-period">Sep 2023 – Feb 2024</div>
-          <div class="tl-role">Research Internship</div>
-          <div class="tl-org">LIRIS Lab, INSA Lyon, France — with <a href="https://riccardotommasini.com/" target="_blank" rel="noreferrer">Dr. Riccardo Tommasini</a></div>
-        </li>
-        <li>
-          <div class="tl-period">Aug 2020 – Aug 2022</div>
-          <div class="tl-role">IBM PhD Fellow</div>
-          <div class="tl-org">IBM Research — 2-year IBM PhD Fellowship, awarded alongside doctoral studies</div>
-        </li>
-        <li>
-          <div class="tl-period">Doctoral studies</div>
+          <div class="tl-period">2019 – 2026</div>
           <div class="tl-role">PhD Researcher</div>
           <div class="tl-org">IIIT Delhi — advised by Dr. Raghava Mutharaju and Dr. Sumit Bhatia</div>
           <div class="tl-note">Benchmarks for description logic reasoners: static, streaming, and neuro-symbolic.</div>
-        </li>
-        <li>
-          <div class="tl-period">May 2019 – Jul 2019</div>
-          <div class="tl-role">Research Internship</div>
-          <div class="tl-org">IBM India Research Lab, New Delhi — with <a href="http://sumitbhatia.net/" target="_blank" rel="noreferrer">Dr. Sumit Bhatia</a></div>
+          <ul class="tl-sub">
+            <li>
+              <div class="tl-sub-period">May – Jul 2019</div>
+              <div class="tl-sub-role">Research Internship</div>
+              <div class="tl-sub-org">IBM India Research Lab, New Delhi — with Dr. Sumit Bhatia</div>
+            </li>
+            <li>
+              <div class="tl-sub-period">Aug 2020 – Aug 2022</div>
+              <div class="tl-sub-role">IBM PhD Fellowship</div>
+            </li>
+            <li>
+              <div class="tl-sub-period">Sep 2023 – Feb 2024</div>
+              <div class="tl-sub-role">Overseas Research Fellowship (ORF)</div>
+              <div class="tl-sub-org">Funded the research stay at LIRIS Lab, INSA Lyon</div>
+            </li>
+            <li>
+              <div class="tl-sub-period">Sep 2023 – Feb 2024</div>
+              <div class="tl-sub-role">Research Internship</div>
+              <div class="tl-sub-org">LIRIS Lab, INSA Lyon, France — with Dr. Riccardo Tommasini</div>
+            </li>
+          </ul>
         </li>
         <li>
           <div class="tl-period">Aug 2016 – Dec 2018</div>
@@ -483,9 +506,14 @@
           <div class="tl-org">Galgotias College of Engineering and Technology (AKTU)</div>
         </li>
         <li>
-          <div class="tl-period">2016 · 2014</div>
-          <div class="tl-role">M.Tech &amp; B.Tech, Computer Science / Engineering</div>
-          <div class="tl-org">Aligarh Muslim University, India — M.Tech with two gold medals</div>
+          <div class="tl-period">2014 – 2016</div>
+          <div class="tl-role">M.Tech, Computer Science &amp; Engineering</div>
+          <div class="tl-org">Aligarh Muslim University, India — two gold medals</div>
+        </li>
+        <li>
+          <div class="tl-period">2010 – 2014</div>
+          <div class="tl-role">B.Tech, Computer Engineering</div>
+          <div class="tl-org">Aligarh Muslim University, India</div>
         </li>
       </ul>
     </div>
